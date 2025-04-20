@@ -62,10 +62,10 @@ async function main() {
     mid.addEventListener("click", () => {
         if (currentAudio.paused) {
             currentAudio.play()
-            mid.src = "pause.png"
+            mid.src = "pause.svg"
         }
         else {
-            mid.src = "playbtn.png"
+            mid.src = "playbtn.svg"
             currentAudio.pause()
         }
 
