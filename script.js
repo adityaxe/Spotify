@@ -1,5 +1,8 @@
 console.log("start");
 let currentAudio = new Audio
+let songs = [];
+let currentSongIndex = 0;
+
 async function getSongs() {
     let a = await fetch("http://127.0.0.1:3000/songs")
     let response = await a.text();
@@ -47,6 +50,7 @@ const playmusic = (track) => {
 
 async function main() {
     let songs = await getSongs()
+
     console.log(songs);
 
     let songUL = document.querySelector(".slist").getElementsByTagName("ul")[0]
@@ -84,7 +88,22 @@ async function main() {
         document.querySelector(".bar").style.left = "-100%";
     });
 
+    back.addEventListener("click",() => {
+        if (currentSongIndex > 0) {
+            currentSongIndex--;
+        }
+        playmusic("http://127.0.0.1:3000/songs/" + songs[currentSongIndex]);
+    });
+    }
+    
+    next.addEventListener("click",() => {
+        // if (currentSongIndex < songs.length - 1) {
+        //     currentSongIndex++;
+        // } 
+    }
+    )
 
 
-}
+
+
 main()
