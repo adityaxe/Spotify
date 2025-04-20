@@ -1,0 +1,79 @@
+body, html {
+    margin: 0;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(0, 0, 0);
+    opacity: 99%;
+}
+
+.box {
+    background-color: rgb(17, 17, 17);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 400px;
+    width: 400px;
+    border-radius: 30px;
+    text-align: center;
+    position: relative;
+    color: rgb(255, 0, 0);
+    font-weight: 800;
+    
+}
+.box h1{
+    position: absolute;
+    animation: pop 3s infinite alternate ease-in-out;
+}
+.box p{
+    padding: 15px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-shadow: 2px 2px 10px rgba(255, 255, 255, 0.256);
+}
+.box h5{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-shadow: 2px 2px 10px rgba(255, 255, 255, 0.256);
+}
+@property --angle{
+    syntax: "<angle>";
+    initial-value: 0deg;
+    inherits: false;
+}
+.box::after, .box::before{
+
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-image: conic-gradient(from var(--angle),red, orange, yellow, green, blue, indigo,violet,red);
+    z-index: -1;
+    padding: 3px;
+    border-radius: 32px;
+    animation: 3s spin linear infinite;
+ }
+ .box::before{
+    filter: blur(1.5rem);
+ }
+ @keyframes spin {
+    from{
+        --angle: 0deg;
+    }
+    to{
+        --angle: 360deg;
+    }
+ }
+
+@keyframes pop {
+    from{
+        opacity: 10%;
+        font-size: 60px;
+        top:10px;
+    }
+    to{
+        opacity: 100%;
+        font-size: 120px;
+        top:-70px;
+    }
+}
