@@ -32,7 +32,7 @@ const playmusic = (track) => {
     if (currentAudio) {
         currentAudio.pause();
     }
-    mid.src = "pause.png"
+    mid.src = "pause.svg"
     currentAudio = new Audio(track);
     currentAudio.play();
     currentAudio.addEventListener("timeupdate", () => {

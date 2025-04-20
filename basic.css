@@ -1,3 +1,6 @@
+body{
+    background-color: #2b2b2b;
+}
 .border{border: 2px solid rgb(0, 255, 162);}
 .flex{
     display: flex;
@@ -13,7 +16,7 @@
     color: white;
 }
 .bggrey{
-    background-color: #606060;
+    background-color: #2b2b2b;
 }
 .invert{
     filter: invert(1);
@@ -32,6 +35,10 @@
 }
 
 
+
+
+
+/* scrollbar */
 ::-webkit-scrollbar {
     width: 8px;
   }
