@@ -1,0 +1,56 @@
+.border{border: 2px solid rgb(0, 255, 162);}
+.flex{
+    display: flex;
+}
+.justify-centre{
+    justify-content: center;
+}
+.align-centre{
+    align-items: center;
+}
+.bgblack{
+    background-color: black;
+    color: white;
+}
+.bggrey{
+    background-color: #606060;
+}
+.invert{
+    filter: invert(1);
+}
+.rounded{
+    border-radius: 5px;
+}
+.m1{
+    margin: 5px;
+}
+.p1{
+    padding: 8px;
+}
+.mini{
+    width: 15px;
+}
+
+
+::-webkit-scrollbar {
+    width: 8px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    transition: background 0.3s;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 255, 255, 0.25);
+  }
+  body {
+    scrollbar-width: thin;
+    scrollbar-color: rgba(255, 255, 255, 0.1) transparent;
+  }
+  

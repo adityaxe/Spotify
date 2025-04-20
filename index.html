@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Totify - Web Player: Music for everyone</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="basic.css">
+    <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
+</head>
+
+<body>
+    <div class="container flex bgblack">
+        <div class="bar rounded">
+            <div class="home bggrey m1 rounded p1">
+                <div class="logo"><img src="logo.png" alt="">
+                
+                </div>
+                <img class="close" src="cross.svg" alt=""> 
+                <ul>
+                    <li><img class="invert" src="home.png" alt="">Home</li>
+                    <li><img class="invert" src="search.png" alt="">Search</li>
+                </ul>
+            </div>
+            <div class="lib m1 bggrey rounded p1">
+                <div class="heading">
+                    <h2>Your Library</h2>
+                </div>
+                <div class="slist">
+                    <ul>
+
+                    </ul>
+                </div>
+                <div class="footer">
+                    <div><a href="https://www.spotify.com/in-en/legal/">Legal</a></div>
+                    <div><a href="https://www.spotify.com/in-en/legal/privacy-policy/">Privacy</a></div>
+                    <div><a href="https://www.spotify.com/in-en/legal/cookies-policy/">Cookies</a></div>
+                    <div><a href="https://www.spotify.com/in-en/legal/privacy-policy/#s3">Ads</a></div>
+                    <div><a href="https://www.spotify.com/in-en/accessibility/">Accessibility</a></div>
+
+                </div>
+            </div>
+
+        </div>
+        <div class="main bggrey p1 rounded">
+            <div class="nav">
+                <img class="menu" src="menu.svg" alt="">
+                <div></div>
+                <div>
+                    <button class="signup">Sign Up</button>
+                    <button class="login">Login</button>
+                </div>
+            </div>
+            <div class="playlist">
+                <h2>Playlists</h2>
+                <div class="cards">
+                    <div class="box">
+                        <img class="playy" src="play.png" alt="">
+                        <img src="art.jpg" alt="">
+                        <h2>ChillRap</h2>
+                        <p>Easygoing beats for your mellow mood.</p>
+                    </div>
+
+                    <div class="box">
+                        <img class="playy" src="play.png" alt="">
+                        <img src="art2.jpg" alt="">
+                        <h2>Hip-Hop</h2>
+                        <p>Low-key hip-hop, high-key vibes.</p>
+                    </div>
+
+                    <div class="box">
+                        <img class="playy" src="play.png" alt="">
+                        <img src="art3.jpg" alt="">
+                        <h2>West-Coast Classics</h2>
+                        <p>Timeless Vibes from the West Coast</p>
+                    </div>
+                </div>
+            </div>
+            <div class="playbar">
+                <div class="seekbar">
+                    <div class="seek"></div>
+                    <div class="circle"></div>
+                </div>
+                <div class="three">
+                    <div class="songname"></div>
+                    <div class="btns">
+                        <img id="back" class="barbtn" src="backbtn.png" alt="">
+                        <img id="mid" class="barbtn" src="playbtn.png" alt="">
+                        <img id="next" class="barbtn" src="nextbtn.png" alt="">
+                    </div>
+                    <div class="songtime">00:00</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
