@@ -6,7 +6,7 @@ let folder = "albuma";
 
 
 async function getSongs() {
-    let a = await fetch(`/${folder}/songs.json`);
+    let a = await fetch(`Spotify/${folder}/songs.json`);
     let songsList = await a.json();
     songs = songsList;
     return songs;
