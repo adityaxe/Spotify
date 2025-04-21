@@ -2,9 +2,10 @@ console.log("start");
 let currentAudio = new Audio
 let songs = [];
 let currentSongIndex = 0;
+let folder = "albuma";
 
 async function getSongs() {
-    let a = await fetch("http://127.0.0.1:3000/songs")
+    let a = await fetch(`http://127.0.0.1:3000/${folder}`)
     let response = await a.text();
     let div = document.createElement("div")
     div.innerHTML = response;
@@ -13,7 +14,7 @@ async function getSongs() {
     for (let index = 0; index < as.length; index++) {
         const element = as[index];
         if (element.href.endsWith(".mp3")) {
-            songs.push(element.href.split(`${/songs/}`)[1])
+            songs.push(element.href.split(`${folder}/`)[1])
         }
     }
     return (songs)
@@ -54,13 +55,14 @@ async function main() {
     console.log(songs);
 
     let songUL = document.querySelector(".slist").getElementsByTagName("ul")[0]
+    songUL.innerHTML = "";
     for (const song of songs) {
         songUL.innerHTML = songUL.innerHTML + `<li>${song.replaceAll("%20", " ")}<img class="mini" src="miniplay.svg" alt=""></li>`
     }
     Array.from(document.querySelector(".slist").getElementsByTagName("li")).forEach(e => {
         e.addEventListener("click", element => {
             const songName = e.innerText;
-            playmusic("http://127.0.0.1:3000/songs/" + songName);
+            playmusic(`http://127.0.0.1:3000/${folder}/` + songName);
         })
     })
     mid.addEventListener("click", () => {
@@ -88,20 +90,29 @@ async function main() {
         document.querySelector(".bar").style.left = "-100%";
     });
 
-    back.addEventListener("click",() => {
-        if (currentSongIndex > 0) {
-            currentSongIndex--;
-        }
-        playmusic("http://127.0.0.1:3000/songs/" + songs[currentSongIndex]);
-    });
-    }
-    
-    next.addEventListener("click",() => {
-        // if (currentSongIndex < songs.length - 1) {
-        //     currentSongIndex++;
-        // } 
-    }
-    )
+    // back.addEventListener("click", () => {
+    //           folder = "albumb"
+    //           main();
+              
+    // })
+
+
+
+
+    // back.addEventListener("click", () => {
+    //     if (currentSongIndex > 0) {
+    //         currentSongIndex--;
+    //     }
+    //     playmusic("http://127.0.0.1:3000/albuma/" + songs[currentSongIndex]);
+    // });
+    // next.addEventListener("click", () => {
+    //     currentSongIndex++;
+    //     playmusic("http://127.0.0.1:3000/songs/" + songs[currentSongIndex]);
+    // }
+
+    // )
+}
+
 
 
 
