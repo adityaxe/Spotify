@@ -72,7 +72,8 @@ async function main() {
     Array.from(document.querySelector(".slist").getElementsByTagName("li")).forEach(e => {
         e.addEventListener("click", element => {
             const songName = e.innerText;
-            playmusic(`/${folder}/` + songName);
+            playmusic(`/Spotify/${folder}/` + songName.trim());    //gpt suggesting 
+            // playmusic(`/${folder}/` + songName);
         })
     })
     mid.addEventListener("click", () => {
