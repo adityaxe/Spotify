@@ -36,7 +36,7 @@ const playmusic = (track) => {
     if (currentAudio) {
         currentAudio.pause();
     }
-    mid.src = "pause.svg"
+    mid.src = "pic/pause.svg"
     currentAudio = new Audio(track);
     currentAudio.play();
     currentAudio.addEventListener("timeupdate", () => {
@@ -57,7 +57,7 @@ async function main() {
     let songUL = document.querySelector(".slist").getElementsByTagName("ul")[0]
     songUL.innerHTML = "";
     for (const song of songs) {
-        songUL.innerHTML = songUL.innerHTML + `<li>${song.replaceAll("%20", " ")}<img class="mini" src="miniplay.svg" alt=""></li>`
+        songUL.innerHTML = songUL.innerHTML + `<li>${song.replaceAll("%20", " ")}<img class="mini" src="pic/miniplay.svg" alt=""></li>`
     }
     Array.from(document.querySelector(".slist").getElementsByTagName("li")).forEach(e => {
         e.addEventListener("click", element => {
@@ -68,10 +68,10 @@ async function main() {
     mid.addEventListener("click", () => {
         if (currentAudio.paused) {
             currentAudio.play()
-            mid.src = "pause.svg"
+            mid.src = "pic/pause.svg"
         }
         else {
-            mid.src = "playbtn.svg"
+            mid.src = "pic/playbtn.svg"
             currentAudio.pause()
         }
 
