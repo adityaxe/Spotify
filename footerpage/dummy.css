@@ -1,4 +1,5 @@
-body, html {
+body,
+html {
     margin: 0;
     height: 100%;
     display: flex;
@@ -20,78 +21,101 @@ body, html {
     text-align: center;
     position: relative;
     color: rgb(253, 253, 253);
-    
+
 }
-.box h1{
+
+.box h1 {
     position: absolute;
     animation: pop 3s infinite alternate ease-in-out;
 }
-.box p{
+
+.box p {
     padding: 15px;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    
+
     animation: textt 500ms;
 }
+
 .box h5 {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     white-space: nowrap;
     overflow: hidden;
     width: fit-content;
     animation: typing 500ms steps(30, end), blink-caret 0.75s step-end infinite;
-  }
-  
+}
 
-  @keyframes typing {
-    from { width: 0 }
-    to { width: 100% }
-  }
-@property --angle{
+
+@keyframes typing {
+    from {
+        width: 0
+    }
+
+    to {
+        width: 100%
+    }
+}
+
+@property --angle {
     syntax: "<angle>";
     initial-value: 0deg;
     inherits: false;
 }
-.box::after, .box::before{
+
+.box::after,
+.box::before {
 
     content: '';
     position: absolute;
     height: 100%;
     width: 100%;
-    background-image: conic-gradient(from var(--angle),red, orange, yellow, green, blue, indigo,violet,red);
+    background-image: conic-gradient(from var(--angle), red, orange, yellow, green, blue, indigo, violet, red);
     z-index: -1;
     padding: 3px;
     border-radius: 32px;
     animation: 3s spin linear infinite;
- }
- .box::before{
+}
+
+.box::before {
     filter: blur(1.5rem);
- }
- @keyframes spin {
-    from{
+}
+
+@keyframes spin {
+    from {
         --angle: 0deg;
     }
-    to{
+
+    to {
         --angle: 360deg;
     }
- }
+}
 
 @keyframes pop {
-    from{
+    from {
         opacity: 10%;
         font-size: 60px;
-        top:10px;
+        top: 10px;
     }
-    to{
+
+    to {
         opacity: 100%;
         font-size: 120px;
-        top:-70px;
+        top: -70px;
     }
 }
 
 @keyframes textt {
-    from{
-opacity: 0%;
+    from {
+        opacity: 0%;
     }
-    to{
 
+    to {}
+}
+
+@media (max-width: 880px) {
+    .box {
+        /* height: 300px; */
+        width: 80vw;
     }
+
+
 }
