@@ -85,11 +85,21 @@ async function main() {
         document.querySelector(".bar").style.left = "-100%";
     });
 
-    // back.addEventListener("click", () => {
-    //           folder = "albumb"
-    //           main();
+    albuma.addEventListener("click", () => {
+              folder = "albuma"
+              main();
               
-    // })
+    })
+    albumb.addEventListener("click", () => {
+              folder = "albumb"
+              main();
+              
+    })
+    albumc.addEventListener("click", () => {
+              folder = "albumc"
+              main();
+              
+    })
 
 
 
