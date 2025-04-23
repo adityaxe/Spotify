@@ -56,8 +56,7 @@ async function main() {
     Array.from(document.querySelector(".slist").getElementsByTagName("li")).forEach(e => {
         e.addEventListener("click", element => {
             const songName = e.innerText;
-            playmusic(`/Spotify/${folder}/` + songName.trim());    //gpt suggesting 
-            // playmusic(`/${folder}/` + songName);
+            playmusic(`/Spotify/${folder}/` + songName.trim()); 
         })
     })
     mid.addEventListener("click", () => {
@@ -88,16 +87,19 @@ async function main() {
     albuma.addEventListener("click", () => {
               folder = "albuma"
               main();
+              playmusic(`/Spotify/${folder}/` + songs[0]);
               
     })
     albumb.addEventListener("click", () => {
               folder = "albumb"
               main();
+              playmusic(`/Spotify/${folder}/` + songs[0]);
               
     })
     albumc.addEventListener("click", () => {
               folder = "albumc"
               main();
+              playmusic(`/Spotify/${folder}/` + songs[0]);
               
     })
 
