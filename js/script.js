@@ -102,11 +102,7 @@ async function main() {
               playmusic(`/Spotify/${folder}/` + songs[0]);
               
     })
-    // delete later
-    future.addEventListener("click",   () => {
-              prompt("Under Construction")
-              
-    })
+    
     // back.addEventListener("click", () => {
     //     if (currentSongIndex > 0) {
     //         currentSongIndex--;
