@@ -84,28 +84,29 @@ async function main() {
         document.querySelector(".bar").style.left = "-100%";
     });
 
-    albuma.addEventListener("click", () => {
+    albuma.addEventListener("click", async() => {
               folder = "albuma"
-              main();
+              await main();
               playmusic(`/Spotify/${folder}/` + songs[0]);
               
     })
-    albumb.addEventListener("click", () => {
+    albumb.addEventListener("click", async() => {
               folder = "albumb"
-              main();
+              await main();
               playmusic(`/Spotify/${folder}/` + songs[0]);
               
     })
-    albumc.addEventListener("click", () => {
+    albumc.addEventListener("click", async() => {
               folder = "albumc"
-              main();
+              await main();
               playmusic(`/Spotify/${folder}/` + songs[0]);
               
     })
-
-
-
-
+    // delete later
+    future.addEventListener("click",   () => {
+              prompt("Under Construction")
+              
+    })
     // back.addEventListener("click", () => {
     //     if (currentSongIndex > 0) {
     //         currentSongIndex--;
