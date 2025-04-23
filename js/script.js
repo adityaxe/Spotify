@@ -3,6 +3,10 @@ let currentAudio = new Audio
 let songs = [];
 let currentSongIndex = 0;
 let folder = "albuma";
+const mid = document.getElementById("mid");
+const albuma = document.getElementById("albuma");
+const albumb = document.getElementById("albumb");
+const albumc = document.getElementById("albumc");
 
 
 async function getSongs() {
@@ -44,7 +48,7 @@ const playmusic = (track) => {
 }
 
 async function main() {
-    let songs = await getSongs()
+    songs = await getSongs()
 
     console.log(songs);
 
