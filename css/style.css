@@ -272,6 +272,11 @@
     border-radius: 20px;
     transition: left 300ms;
 }
+.empty{
+    height: 70px;
+    width: 50vw;
+    display: none;
+}
 
 @keyframes pop {
     from {}
@@ -358,6 +363,9 @@
         
         position: relative;
         bottom: 7px;
+    }
+    .empty{
+        display: block;
     }
     
 }
