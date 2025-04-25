@@ -107,18 +107,18 @@ async function main() {
               
     })
     
-    // back.addEventListener("click", () => {
-    //     if (currentSongIndex > 0) {
-    //         currentSongIndex--;
-    //     }
-    //     playmusic("http://127.0.0.1:3000/albuma/" + songs[currentSongIndex]);
-    // });
-    // next.addEventListener("click", () => {
-    //     currentSongIndex++;
-    //     playmusic("http://127.0.0.1:3000/songs/" + songs[currentSongIndex]);
-    // }
+    back.addEventListener("click", () => {
+        if (currentSongIndex > 0) {
+            currentSongIndex--;
+        }
+        playmusic("http://127.0.0.1:3000/albuma/" + songs[currentSongIndex]);
+    });
+    next.addEventListener("click", () => {
+        currentSongIndex++;
+        playmusic("http://127.0.0.1:3000/songs/" + songs[currentSongIndex]);
+    }
 
-    // )
+    )
 }
 
 
