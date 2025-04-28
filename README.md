@@ -16,3 +16,16 @@ A simple and responsive Spotify clone built using **HTML**, **CSS**, and **JavaS
 - **HTML** – Structure and content
 - **CSS** – Styling and layout
 - **JavaScript** – Interactivity and music player logic
+
+
+
+## Upcoming features
+
+- Pressing left and right arrow key to seek the playing song by 5 seconds
+- Adding volume funtion
+
+
+## Known Bugs
+
+- Next and previous song doesnt autoplay the music
+- Search Funtion not working
